@@ -27,7 +27,7 @@
 
 .main-div {
     position: relative;
-    top: 20vh;
+    top: 10vh;
     /* border: 1px solid slateblue; */
     display: flex;
     flex-direction: column;
@@ -54,11 +54,27 @@
     transition: all 0.3s ease;
     text-transform: uppercase;
 }
+#againPlay {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: 1px solid green;
+    background-color: transparent;
+    border-radius: 10px;
+    color: green;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
 
 #play:hover {
     border: 1px solid slateblue;
     background-color: transparent;
     color: slateblue;
+}
+#againPlay:hover {
+    border: 1px solid transparent;
+    background-color: green;
+    color: #111111;
 }
 
 .top-div {
@@ -108,7 +124,7 @@
 
 @media screen and (max-width: 750px) {
     .main-div {
-        top: 10vh;
+        top: 5vh;
     }
 
     .top-div > div {
@@ -129,13 +145,23 @@
         padding: 0.3rem 0.5rem;
         font-size: 0.8rem;
     }
+    #againPlay {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+    }
 
     h1 {
         font-size: 1.8rem;
     }
+    #result {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 500px) {
+    .main-div {
+        top: 5vh;
+    }
     .top-div {
         flex-direction: column;
         align-items: center;
@@ -153,6 +179,22 @@
         margin-top: -3rem;
     }
     #result {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
         font-size: 1.5rem;
+    }
+
+    .main-div > div {
+        width: 70%;
+    }
+
+    .result-div {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
     }
 }
